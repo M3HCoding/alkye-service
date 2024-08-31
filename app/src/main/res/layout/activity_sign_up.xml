@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:background="@drawable/logo"
+        android:nextFocusDown="@id/etUserEmail"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_rectangle_two"
+        android:padding="10dp"
+        android:hint="Enter Your Name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:nextFocusDown="@id/etUserEmail"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_rectangle_two"
+        android:padding="10dp"
+        android:hint="Enter Email Address"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:nextFocusDown="@id/etUserMobileNumber"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etUserMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_rectangle_two"
+        android:padding="10dp"
+        android:hint="Enter Mobile Number"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:nextFocusDown="@id/rtDescription"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/rtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_rectangle_two"
+        android:padding="10dp"
+        android:hint="Enter Description"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:nextFocusDown="@id/etAddress" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_rectangle_two"
+        android:padding="10dp"
+        android:hint="Enter Your Address"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:nextFocusDown="@id/btnSignUp"/>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_rectangle_two"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:backgroundTint="@color/color_rounded_background"
+        android:text="@string/sign_up"
+        android:textColor="@color/color_white_text" />
+
+</LinearLayout>

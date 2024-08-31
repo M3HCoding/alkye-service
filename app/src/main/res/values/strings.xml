@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Alkye Aervice Application</string>
+    <string name="contentDescription"> </string>
+    <string name="sign_in">Sign-in</string>
+    <string name="sign_up">Sign-up</string>
+    <string name="terms">&#160;<u>Terms</u>&#160;</string>
+    <string name="in_a_world_of_finite_resources_the_true_measure_of_innovation_lies_not_in_its_complexity_but_in_its_capacity_to_simplitfy_and_empower_the_human_mind">In a world of finite resources, the true measure of innovation lies not in its complexity, but in its capacity to simplitfy and empower the human mind.</string>
+    <string name="welcome">Welcome</string>
+    <string name="recent_articles">Recent Articles</string>
+    <string name="technology">technology</string>
 </resources>
