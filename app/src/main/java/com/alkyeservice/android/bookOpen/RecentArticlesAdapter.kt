@@ -2,9 +2,11 @@ package com.alkyeservice.android.bookOpen
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.alkyeservice.android.activity.ArticleDetailActivity
 import com.alkyeservice.android.databinding.ItemRecentArticlesBinding
 
 class RecentArticlesAdapter(private val context: Context,
@@ -18,6 +20,11 @@ class RecentArticlesAdapter(private val context: Context,
         fun bind(articleItem: ArticleItem) {
             binding.apply {
                 tvDescription.text=articleItem.description
+
+                root.setOnClickListener {
+                    val articleDetailActivity = Intent(context, ArticleDetailActivity::class.java)
+                    context.startActivity(articleDetailActivity)
+                }
             }
         }
     }

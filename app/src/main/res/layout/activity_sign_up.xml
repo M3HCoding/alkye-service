@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="30dp"
+    android:id="@+id/signUp"
     android:gravity="center">
 
     <ImageView
@@ -73,14 +74,14 @@
         android:inputType="text"
         android:nextFocusDown="@id/btnSignUp"/>
 
-    <Button
+    <TextView
         android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:padding="10dp"
         android:background="@drawable/rounded_rectangle_two"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
         android:backgroundTint="@color/color_rounded_background"
         android:text="@string/sign_up"
         android:textColor="@color/color_white_text" />

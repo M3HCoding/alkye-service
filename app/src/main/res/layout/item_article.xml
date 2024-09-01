@@ -3,52 +3,69 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_news"
-    android:layout_width="match_parent"
+    android:layout_width="310dp"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_marginEnd="10dp"
     android:background="@color/color_app_background"
     android:orientation="vertical"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="20dp">
+    app:cardCornerRadius="15dp"
+    app:cardElevation="15dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="100"
         tools:ignore="DisableBaselineAlignment">
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="44"
-            android:orientation="horizontal">
+            android:layout_weight="50">
 
+            <!-- Background image filling the entire width -->
             <ImageView
                 android:id="@+id/ivPicture"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/contentDescription"
                 android:scaleType="fitXY"
-                android:src="@drawable/car" />
+                android:src="@drawable/car_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
+            <!-- Icon on the top left -->
+            <ImageView
+                android:id="@+id/ivLeftIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/youtube"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="8dp" />
 
-        </LinearLayout>
+            <!-- Icon on the top right -->
+            <ImageView
+                android:id="@+id/ivRightIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/frame_25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_weight="56"
+            android:padding="5dp"
+            android:layout_weight="50"
             android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/contentDescription"
-                android:scaleType="fitXY"
-                android:src="@drawable/youtube" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,8 +76,8 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:background="@drawable/selected_tab_background"
                     android:contentDescription="@string/contentDescription" />
 
@@ -68,27 +85,15 @@
                     android:id="@+id/tvCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="10dp"
                     android:fontFamily="@font/strawford_medium"
                     android:lineSpacingExtra="5dp"
                     android:text="@string/technology"
                     android:textColor="@color/color_black_text_title"
                     android:textSize="11sp"
-                    android:textStyle="normal"
-                    tools:targetApi="o" />
+                    android:textStyle="normal"/>
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/strawford_bold"
-                android:lineSpacingExtra="5dp"
-                android:text="Step Into Tomorrow:"
-                android:textColor="@color/color_black_text_title"
-                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvDescription"
@@ -97,19 +102,18 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/strawford_regular"
                 android:lineSpacingExtra="5dp"
-                android:text="Exploring Spatial Computing’s Impact On Industries And The Metaverse!"
+                android:text="@string/step_into_tomorrow_exploring_spatial_computing_s_impact_on_industries_and_the_metaverse"
                 android:textColor="@color/color_black_text_title"
                 android:textSize="16sp" />
-
 
             <TextView
                 android:id="@+id/tvDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/strawford_regular"
-                android:lineSpacingExtra="5dp"
                 android:text="12 Feb 2024"
+                android:layout_marginBottom="5dp"
                 android:textColor="@color/color_black_text_title"
                 android:textSize="12sp" />
 

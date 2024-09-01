@@ -2,9 +2,13 @@ package com.alkyeservice.android.bookOpen
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.alkyeservice.android.activity.ArticleDetailActivity
+import com.alkyeservice.android.activity.HomeActivity
 import com.alkyeservice.android.databinding.ItemArticleBinding
 
 class ArticleAdapter(private val context: Context,
@@ -18,9 +22,13 @@ class ArticleAdapter(private val context: Context,
         fun bind(articleItem: ArticleItem) {
             binding.apply {
                 tvCategory.text=articleItem.category
-                tvTitle.text=articleItem.title
-                tvDescription.text=articleItem.description
+               // tvDescription.text=articleItem.description
                 tvDate.text=articleItem.date
+
+                root.setOnClickListener {
+                    val articleDetailActivity = Intent(context, ArticleDetailActivity::class.java)
+                    context.startActivity(articleDetailActivity)
+                }
             }
         }
     }
